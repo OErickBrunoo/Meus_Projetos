@@ -1,20 +1,22 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 int main() {
+
+	printf("Content-Type: text/plain\n\n");	
+
     float pnumero, snumero, resultado, pri_grau, radianos;
     int escolha;
 	const double pi = 3.1415926535897;
-    
-    printf("Selecione a função \n Adição (1)\n subtração (2)\n Multiplicação (3)\n Divisao (4):\n Exponenciação (5) \n Raiz Quadrada (6) \n Seno (7) \n Cosseno (8)\n Resposta:");
-    scanf("%d", &escolha);
+    char *dados = getenv("QUERY_STRING") // String exemplo :: 
+	
+    //printf("Selecione a função \n Adição (1)\n subtração (2)\n Multiplicação (3)\n Divisao (4):\n Exponenciação (5) \n Raiz Quadrada (6) \n Seno (7) \n Cosseno (8)\n Resposta:");
+	
+    sscanf(dados, %f&%f&%d, &pnumero, &pnumero, &escolha);
     
 	if (escolha <= 5) {
-		printf("Primeiro número: ");
-		scanf("%f", &pnumero);
-		printf("Segundo número: ");
-		scanf("%f", &snumero);
-		
+
 		switch (escolha) {
         case 1:
             resultado = pnumero + snumero;
